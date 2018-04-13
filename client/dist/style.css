@@ -1,0 +1,58 @@
+#header {
+	display: flex;
+	width: 70%;
+	margin: auto;
+}
+.header-left {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	width: 50%;
+}
+.titleClass {
+	display: flex;
+	margin-top: 9px;
+	align-items: baseline;
+}
+#restaurantName {
+	font-size: 36px;
+	margin-right: 10px;
+	line-height: 1.16667em;
+}
+.titleLine {
+	margin-right: 10px;
+}
+.reviewLine {
+	margin-right: 10px;
+}
+.categories {
+	margin-right: 10px;
+	color: #0073bb;
+
+}
+.ratingClass {
+	display: flex;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.categoryClass {
+	display: flex;
+
+}
+.actionClass {
+	display: flex;
+	width: 50%;
+	align-items: center;
+	
+
+}
+#writeReview {
+	height: 3.16667em;
+	width: 12em;
+	margin-right: 20px;
+}
+.actionElements {
+	height: 30px;
+	border-radius: 3px 0 0 3px
+	
+}
