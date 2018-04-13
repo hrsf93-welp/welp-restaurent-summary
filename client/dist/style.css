@@ -1,7 +1,8 @@
 #header {
 	display: flex;
-	width: 70%;
+	width: 80%;
 	margin: auto;
+	justify-content: space-between;
 }
 .header-left {
 	display: flex;
@@ -47,16 +48,15 @@
 	display: flex;
 	width: 50%;
 	align-items: center;
-	
-
+	margin-left: 40px;
 }
 #writeReview {
 	height: 3.16667em;
-	width: 12em;
+	width: 15em;
 	margin-right: 20px;
 }
 .actionElements {
 	height: 30px;
-	border-radius: 3px 0 0 3px
-	
+	border-radius: 3px 0 0 3px;
+	width: 90px;
 }

@@ -13,11 +13,11 @@ constructor(props) {
         <div className="header-left">
           <div className="titleClass">
             <div className="titleLine" id="restaurantName">Bunn Mike</div>
-            <div className="titleLine" id="restaurantClaimed">claimed</div>
+            <div className="titleLine" id="restaurantClaimed">CheckMarkHere</div>
             <div className="titleLine" id="restaurantClaimed">claimed</div>
           </div>
           <div className="ratingClass">
-            <div className="reviewLine" id="restaurantStars">stars</div>
+            <div className="reviewLine" id="restaurantStars">starsHere</div>
             <div className="reviewLine" id="restaurantReviewCount">16 reviews</div>
             <button className="reviewLine" id="restaurantDetail">Detail</button>
           </div>
