@@ -67,17 +67,5 @@ function fetchInfo() {
     }
   });
 }
-//   allRestaurants.push(restaurant);
-// });
-// // Restaurants.insertMany(allRestaurants, (error) => {
-// //   if (error) {
-// //     console.error(error);
-// //   }
-// // });
-
-
-// db.restaurants.insertMany(allRestaurants);
-
-// // db.restaurants.insertMany(allRestaurants);
 // // export to  use
 module.exports = fetchInfo;
