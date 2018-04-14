@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const { Schema } = mongoose;
-const db = mongoose.connect('mongodb://localhost/welp');
+mongoose.connect('mongodb://localhost/welp');
 
 // set schema
 const restaurantSchema = Schema({
@@ -31,7 +31,7 @@ const rl = readline.createInterface({
   crlfDelay: Infinity,
 });
 // parse data and create instance of restaurants
-let allRestaurants = [];
+const allRestaurants = [];
 
 rl.on('line', (line) => {
   const infos = JSON.parse(line);
