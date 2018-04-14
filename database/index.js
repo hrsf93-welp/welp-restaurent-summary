@@ -1,40 +1,41 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/welp');
 const readline = require('readline');
 const fs = require('fs');
-const path = require('path')
-var Schema = mongoose.Schema;
-var db = mongoose.connect;
+const path = require('path');
 
-//set schema
-let restaurantSchema = Schema ({
+const { Schema } = mongoose;
+mongoose.connect('mongodb://localhost/welp');
+
+// set schema
+const restaurantSchema = Schema({
   id: Number,
   name: String,
   stars: Number,
   reviewCount: Number,
   restaurantsPriceRange2: Number,
-  categories: [{style: String}],
+  categories: [{ tyle: String }],
   claimed: Boolean,
   address: String,
   city: String,
   state: String,
   postalCode: String,
   neighborhood: String,
-  phoneNumber: String
+  phoneNumber: String,
 });
 // set model
-var Restaurants = mongoose.model('Restaurants', restaurantSchema);
+const Restaurants = mongoose.model('Restaurants', restaurantSchema);
 
-// create readline interfase 
+// create readline interfase
 const rl = readline.createInterface({
-  input: fs.createReadStream(path.join(__dirname,'sample_yelp_data.json')),
-  crlfDelay: Infinity
+  input: fs.createReadStream(path.join(__dirname, 'sample_yelp_data.json')),
+  crlfDelay: Infinity,
 });
+// parse data and create instance of restaurants
+const allRestaurants = [];
 
-// parse data and create instance of restaurants 
 rl.on('line', (line) => {
-  var infos = JSON.parse(line);
-  var  restaurant = new Restaurants({
+  const infos = JSON.parse(line);
+  const restaurant = new Restaurants({
     id: infos.id,
     name: infos.name,
     stars: infos.stars,
@@ -46,12 +47,25 @@ rl.on('line', (line) => {
     state: infos.state,
     postalCode: infos.postalCode,
     neighborhood: infos.neighborhood,
-    phoneNumber: "415-726-7066"
+    phoneNumber: '415-726-7066',
   });
   // save document to database
-  restaurant.save(function (err) {
-  if (err) return console.log(err);
-  })
+  allRestaurants.push(restaurant);
+  Restaurants.insertMany(allRestaurants, (err) => {
+    if (err) {
+      // console.error(err);
+    }
+  });
 });
-// export to  use
-module.export = Restaurants;
+
+function fetchInfo() {
+  Restaurants.find((err, results) => {
+    if (err) {
+      console.err(err);
+    } else {
+      console.log(results);
+    }
+  });
+}
+// // export to  use
+module.exports = fetchInfo;
