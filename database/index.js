@@ -21,6 +21,7 @@ const restaurantSchema = Schema({
   postalCode: String,
   neighborhood: String,
   phoneNumber: String,
+  businessId: String,
 });
 // set model
 const Restaurants = mongoose.model('Restaurants', restaurantSchema);
@@ -40,7 +41,7 @@ rl.on('line', (line) => {
     name: infos.name,
     stars: infos.stars,
     reviewCount: infos.reviewCount,
-    restaurantsPriceRange2: infos.restaurantsPriceRange2,
+    restaurantsPriceRange2: Math.ceil(Math.random() * 3),
     claimed: true,
     address: infos.address,
     city: infos.city,
@@ -48,24 +49,28 @@ rl.on('line', (line) => {
     postalCode: infos.postalCode,
     neighborhood: infos.neighborhood,
     phoneNumber: '415-726-7066',
+    businessId: infos.businessId,
   });
   // save document to database
   allRestaurants.push(restaurant);
   Restaurants.insertMany(allRestaurants, (err) => {
     if (err) {
+      // it shows duplicate key error here, handle it later,
+      // in reality, I may import the data into database direction not insert it here,
+      // just for practice,
       // console.error(err);
     }
   });
 });
 
-function fetchInfo() {
-  Restaurants.find((err, results) => {
+function fetchInfo(query, callback) {
+  Restaurants.find(query, (err, results) => {
     if (err) {
-      console.err(err);
+    // console.err(err);
     } else {
-      console.log(results);
+      callback(null, results);
     }
   });
 }
 // // export to  use
-module.exports = fetchInfo;
+module.exports.fetchInfo = fetchInfo;
