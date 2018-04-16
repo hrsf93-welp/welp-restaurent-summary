@@ -5,7 +5,7 @@ const SummaryInfos = props => (
     <div className="titleClass">
       <div className="titleLine" id="restaurantName">{ props.infos.name }</div>
       <div className="titleLine" id="restaurantClaimed">CheckMarkHere</div>
-      <div className="titleLine" id="restaurantClaimed">claimed</div>
+      <div className="titleLine" id="restaurantClaimed"><a data-toggle="tooltip" data-placement="top" title="This business has been claimed by the owner or a representative!">claimed</a></div>
     </div>
     <div className="ratingClass">
       <div className="reviewLine" id="restaurantStars">{props.infos.stars}</div>
