@@ -1,20 +1,26 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
 
-var db = require('../database/index.js');
+const db = require('../database/index.js');
 
-var PORT = 3001;
+const PORT = 3001;
 
-var app = express();
+const app = express();
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(bodyParser.json());
 
-app.get('/', function(req, res){
-	res.send('test!');
+app.get(`/api/summaryInfos/:id`, (req, res) => {
+  db.fetchInfo({ id: req.params.id }, (err, result) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result[0]);
+    }
+  });
 });
 
-app.listen(PORT, function(){
-	console.log(`Listening on http://localhost:${PORT}`);
-})
+app.listen(PORT, () => {
+  console.log(`Listening on http://localhost:${PORT}`);
+});

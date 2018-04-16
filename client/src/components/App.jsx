@@ -1,21 +1,28 @@
 import React from 'react';
+import axios from 'axios';
 import ActionList from './ActionList';
 import SummaryInfos from './SummaryInfos';
-// import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sampleData: { id: 18, name: 'Mike\'s' },
+      data: {},
     };
   }
 
+  componentDidMount() {
+    axios.get('/api/summaryInfos/20').then((response) => {
+      this.setState({
+        data: response.data,
+      });
+    });
+  }
   render() {
     return (
       <div id="header">
-        <SummaryInfos />
-        <ActionList />
+        <SummaryInfos infos={this.state.data} />
+        <ActionList infos={this.state.data} />
       </div>
     );
   }
