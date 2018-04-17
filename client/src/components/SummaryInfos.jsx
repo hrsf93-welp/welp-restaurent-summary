@@ -1,6 +1,10 @@
 import React from 'react';
-
-
+const priceRange = {
+  1: '$',
+  2: '$$',
+  3: '$$$',
+  4: '$$$$',
+};
 function SummaryInfos(props) {
   return (
     <div className="header-left">
@@ -14,7 +18,7 @@ function SummaryInfos(props) {
         <button className="reviewLine" id="restaurantDetail">Detail</button>
       </div>
       <div className="categoryClass">
-        <span id="priceRange">{props.infos.restaurantsPriceRange2}</span>
+        <span id="priceRange">{priceRange[props.infos.restaurantsPriceRange2]}</span>
         <span id="bullet">•</span>
         <a className="categories" href="https://www.yelp.com/search?find_desc=mexican&find_loc=Financial+District,+San+Francisco,+CA">Mexican,</a>
         <a className="categories" href="https://www.yelp.com/search?find_desc=taco&find_loc=Financial+District,+San+Francisco,+CA">Taco,</a>
