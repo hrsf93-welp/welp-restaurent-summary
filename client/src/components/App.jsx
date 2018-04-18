@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ActionList from './ActionList';
-import SummaryInfos from './SummaryInfos';
-import Map from './Map';
+import SummaryInfo from './SummaryInfo';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +12,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/summaryInfos/28').then((response) => {
+    axios.get('/api/summaryInfos/11').then((response) => {
       this.setState({
         data: response.data,
       });
@@ -24,11 +23,8 @@ class App extends React.Component {
     return (
       <div>
         <div id="header">
-          <SummaryInfos infos={this.state.data} />
-          <ActionList infos={this.state.data} />
-        </div>
-        <div className="mapbox">
-          <Map info={this.state.data} />
+          <SummaryInfo info={this.state.data} />
+          <ActionList info={this.state.data} />
         </div>
       </div>
     );
