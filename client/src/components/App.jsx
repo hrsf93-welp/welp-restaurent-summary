@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import ActionList from './ActionList';
 import SummaryInfo from './SummaryInfo';
+import MapBox from './MapBox';
 
 class App extends React.Component {
   constructor(props) {
@@ -21,10 +22,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="headerContainer">
         <div id="header">
           <SummaryInfo info={this.state.data} />
           <ActionList info={this.state.data} />
+        </div>
+        <div className="mapBox">
+          <MapBox info={this.state.data} />
         </div>
       </div>
     );
