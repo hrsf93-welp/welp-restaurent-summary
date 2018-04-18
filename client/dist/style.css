@@ -1,3 +1,4 @@
+
 #header {
 	display: flex;
 	width: 80%;
@@ -9,6 +10,33 @@
 	justify-content: flex-start;
 	flex-direction: column;
 	width: 50%;
+}
+.mapBox {
+	border: 1px solid #ccc;
+	background-color: #fff;
+	padding: 5px;
+	margin-top: 20px;
+	position: absolute;
+	left: 90px;;
+	height: 300px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+}
+ul {
+	padding: 0px;
+}
+
+.mapinfo {
+	display: flex;
+	justify-content: flex-start;
+}
+.mapinfo a {
+	color: #0073bb;
+}
+.mapIcon {
+	height: 18px;
+	width: 18px;
 }
 #photo,
 #bookmark,
