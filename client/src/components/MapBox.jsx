@@ -1,13 +1,11 @@
 import React from 'react';
-import GoogleMap from './GoogleMap';
 
 function MapBox(props) {
   return (
     <div>
       <div className="mapBox-map">
-        <GoogleMap />
         <a href="/map/freshroll-vietnamese-rolls-and-bowls-san-francisco-6" className="biz-map-directions" data-component-bound="true">
-          <img id="test" alt="Map" height="135" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&amp;center=37.791469%2C-122.404415&amp;language=None&amp;zoom=15&amp;markers=scale%3A2%7Cicon%3Ahttps%3A%2F%2Fyelp-images.s3.amazonaws.com%2Fassets%2Fmap-markers%2Fannotation_64x86.png%7C37.791469%2C-122.404415&amp;client=gme-yelp&amp;sensor=false&amp;size=286x135&amp;signature=U5GPwdnMhxnETbs8TIhGJUFbGqY=" width="286" />
+          <img id="test" alt="Map" height="135" src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=AIzaSyBmOu8ZseKVl4Ke1QOkP6eY3_bhKJpJ0-o" width="286" />
         </a>
       </div>
       <div className="mapBox-text">
