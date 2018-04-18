@@ -19,7 +19,9 @@
 	fill: grey;
 }
 #star {
-	fill: white;
+	fill: white;	
+	height: 18px;
+	width: 18px;
 }
 .titleClass {
 	display: flex;
@@ -91,14 +93,16 @@
 	margin-left: 40px;
 }
 #writeReview {
+	display: flex;
+	align-items: center;
 	border: 1px solid #8d0005;
 	font-size: 14px;
-	height: 1.56667em;
-	width: 10em;
+	height: 30px;
+	width: 130px;
 	margin-right: 20px;
 	color: white;
 	background-color: #d90007;
-	padding: 8px 19px 9px;
+	
 	border-radius: 3px;
 }
 #writeReview :hover{

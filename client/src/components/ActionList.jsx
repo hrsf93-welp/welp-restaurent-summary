@@ -1,10 +1,13 @@
 import React from 'react';
+//  <a className="actionElements" id="writeReview" href={`https://www.yelp.com/writeareview/biz/${props.info.businessId}?return_url=%2Fbiz%2FSn88jc5tEJH-D4qxqZn8PQ&source=biz_details_war_button`}>
+//  <span><svg actionElements className="WAT" id="star" height="100%" viewBox="0 0 24 24" width="100%"><path d="M12 1.5l2.61 6.727 6.89.53-5.278 4.688 1.65 7.055L12 16.67 6.13 20.5l1.648-7.055L2.5 8.757l6.89-.53L12 1.5z"></path></svg></span>
+//  <span className="WAT">Write A Review</span>// </a>
 
 function ActionList(props) {
   return (
     <div className="actionClass">
       <span>
-        <a className="actionElements" id="writeReview" href={`https://www.yelp.com/writeareview/biz/${props.info.businessId}?return_url=%2Fbiz%2FSn88jc5tEJH-D4qxqZn8PQ&source=biz_details_war_button`}><svg id="star" height="100%" viewBox="0 0 24 24" width="100%"><path d="M12 1.5l2.61 6.727 6.89.53-5.278 4.688 1.65 7.055L12 16.67 6.13 20.5l1.648-7.055L2.5 8.757l6.89-.53L12 1.5z"></path></svg>Write A Review</a>
+        <a className="actionElements" id="writeReview" href={`https://www.yelp.com/writeareview/biz/${props.info.businessId}?return_url=%2Fbiz%2FSn88jc5tEJH-D4qxqZn8PQ&source=biz_details_war_button`}><svg id="star" height="100%" viewBox="0 0 24 24" ><path d="M12 1.5l2.61 6.727 6.89.53-5.278 4.688 1.65 7.055L12 16.67 6.13 20.5l1.648-7.055L2.5 8.757l6.89-.53L12 1.5z"></path></svg>Write A Review</a>
       </span>
       <span className="actionList">
         <a className="actionElements" id="addphoto" href={`https://www.yelp.com/biz_user_photos/${props.info.businessId}/upload`}><svg id="photo" height="100%" viewBox="0 0 18 18" width="100%"><path d="M15 15H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2zM9 4.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM11 10h-1v1a1 1 0 0 1-2 0v-1H7a1 1 0 0 1 0-2h1V7a1 1 0 0 1 2 0v1h1a1 1 0 0 1 0 2z"></path></svg>Add Photo</a>
