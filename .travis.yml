@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - "8"
-sudo: false
-env:
-  - EMBER_VERSION=default
-  - EMBER_VERSION=release
-  - EMBER_VERSION=beta
-  - EMBER_VERSION=canary
