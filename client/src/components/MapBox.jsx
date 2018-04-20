@@ -5,7 +5,7 @@ function MapBox(props) {
     <div>
       <div className="mapBox-map">
         <a href="/map/freshroll-vietnamese-rolls-and-bowls-san-francisco-6" className="biz-map-directions" data-component-bound="true">
-          <img id="test" alt="Map" height="135" src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=AIzaSyBmOu8ZseKVl4Ke1QOkP6eY3_bhKJpJ0-o" width="286" />
+          <img id="test" alt="Map" height="135" src="https://maps.googleapis.com/maps/api/staticmap?center=36.1440231017,-115.195895992&zoom=12&size=400x200&markers=color:red%7Clabel:S%7C36.1440231017,-115.195895992&key=AIzaSyARCEIY_6KBaJzAm0snj0l10py-MJKCx00" width="286" />
         </a>
       </div>
       <div className="mapBox-text">
