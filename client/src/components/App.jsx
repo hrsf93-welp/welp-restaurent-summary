@@ -13,7 +13,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/summaryInfos/11').then((response) => {
+    axios.get('/api/summaryInfos/8').then((response) => {
       this.setState({
         data: response.data,
       });
@@ -27,7 +27,7 @@ class App extends React.Component {
           <SummaryInfo info={this.state.data} />
           <ActionList info={this.state.data} />
         </div>
-        <div className="mapBox">
+        <div className="mapAndPhotos">
           <MapBox info={this.state.data} />
         </div>
       </div>
